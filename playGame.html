@@ -1,0 +1,140 @@
+<!doctype>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>La Ruleta de los Métodos</title>
+
+	<!--CSS Files-->
+	<link rel="stylesheet" type="text/css" href="styles/css/bargame-css.css">
+	
+
+	<!--JS Files-->
+	
+		<link rel="stylesheet" type="text/css" href="css/default.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<script src="js/modernizr.custom.js"></script>
+		<script src="gamelogic.js"></script>
+</head>
+<body>
+
+ 	<nav>
+     <div class="nav-elements">
+	  <a href="about.html">Acerca de</a>
+	 </div>
+	</nav>
+
+	    <div id="main-content">
+			<div id="left-content" class="content-child">
+				<table id="table">
+					<!--Top -->
+					<tr>
+						<td id="1"class="td-elements" >Interpolación<br>lineal<br><input id="1i" type="number" min="0" max="10000" type="textbox" size="5"></td>
+
+						<td class="td-elements" id="2" >Newton<br>hacia<br>adelante<br><input id="2i"type="number" min="0" max="10000"></td>
+
+						<td class="td-elements"id="3" >Newton hacia<br>atras<br><input id="3i"type="number" min="0" max="10000" type="textbox" size="5"></td>
+
+						<td class="td-elements" id="4" >Newton con<br>diferencias<br>divididas<br><input id="4i" type="number" min="0" max="10000" type="textbox" size="5"></td>
+
+
+						<td class="td-elements"id="5">Lagrange<br><input id="5i"type="number" min="0" max="10000"></td>
+
+						<td class="td-elements"id="6">Bisectriz<br><input id="6i"type="number" min="0" max="10000" type="textbox" size="5"></td>
+
+						<td class="td-elements"id="7">Ecuaciones<br>no<br>lineales<br><input id="7i" type="number" min="0" max="10000" type="textbox" size="5"></td>
+
+						<td class="td-elements"id="8">Punto fijo<br>o<br>sustituciones<br>sucesivas<br><input id="8i" type="number" min="0" max="10000" type="textbox" size="5"></td>
+
+						<td class="td-elements"id="9">Newton-Raphson<br><input id="9i"type="number" min="0" max="10000"></td>
+
+						<td class="td-elements"id="10">Falsa<br>posición<br><input id="10i"type="number" min="0" max="10000" type="textbox" size="5"></td>
+					</tr>
+					<tr>
+						<td class="td-elements" id="32">Secante<br><input id="32i" type="number" min="0" max="10000" type="textbox" size="5"></td>
+
+						<td class="empty" colspan="8"></td>
+
+						<td  class="td-elements" id="11">Minimos<br>cuadrados<br><input id="11i" type="number" min="0" max="10000" type="textbox" size="5"></td>
+
+					</tr>
+					<tr>
+						<td class="td-elements" id="31">Integración<br><input id="31i" type="number" min="0" max="10000" type="textbox" size="5"></td>
+
+						<td rowspan="2"colspan="8" id="buttons-container">
+
+							<p class="normalText">¡Apuesta por tu Favorito!<br>
+													Créditos Disponibles: <p id="money-left">$ 500</p></p>
+							
+							
+							<button  id="init" class="btn btn-2 btn-2i" onclick="letsStartThis()">Iniciar</button>
+							
+							
+
+						</td>
+
+						<td class="td-elements" id="12">Regla de<br>1/3<br>Simpson<br><input id="12i"type="number" min="0" max="10000" type="textbox" size="5"></td>
+					</tr>
+					<tr>
+						<td class="td-elements" id="30">Newton<br>-<br>Cotes<br><input id="30i" type="number" min="0" max="10000" type="textbox" size="5"></td>
+						
+						<td class="td-elements" id="13">Regla de<br>3/8<br>Simpson<br><input id="13i" type="number" min="0" max="10000" type="textbox" size="5"></td>
+					</tr>
+					<tr>
+						<td class="td-elements" id="29">Orden Superior<br><input id="29i" type="number" min="0" max="10000" type="textbox" size="5"></td>
+
+						<td class="empty" class="td-elements" colspan="2"></td>
+
+						<td rowspan="2" class="td-elements" id="1e">Montante<br><input id="1i" type="number" min="0" max="10000" type="textbox" size="5"></td>
+
+						<td  class="td-elements" rowspan="2" id="2e">Gauss-Jordan<br><input id="2i" type="number" min="0" max="10000" type="textbox" size="5"></td>
+
+						<td  class="td-elements" rowspan="2"id="3e">Eliminación<br>Gaussiana<br><input id="3i" type="number" min="0" max="10000" type="textbox" size="5"></td>
+
+						<td class="td-elements" rowspan="2"id="4e">Jacobi<br><input id="4i" type="number" min="0" max="10000" type="textbox" size="5"></td>
+
+						<td class="empty" colspan="2"></td>
+
+						<td class="td-elements" id="14">Raices<br>de<br>Polinomios<br><input id="14i" type="number" min="0" max="10000" type="textbox" size="5"></td>
+					</tr>
+					
+					<tr>
+						<td class="td-elements" id="28">EXTRAS x2</td>
+
+						<td class="empty" colspan="8"></td>
+
+						<td class="td-elements" id="15">EXTRAS x5</td>
+					</tr>
+					<tr>
+						<td class="td-elements" id="27">Linea Recta<br><input id="27i" type="number" min="0" max="10000" type="textbox" size="5"></td>
+						<td class="empty" colspan="8"></td>
+						<td class="td-elements" id="16">Cuadrática<br><input id="16i" type="number" min="0" max="10000" type="textbox" size="5"></td>
+						
+					</tr>
+					<tr>
+						<td class="td-elements" id="26">Cúbica<br><input id="26i" type="number" min="0" max="10000" type="textbox" size="5"></td>
+						<td class="td-elements" id="25">Lineal con Función<br><input id="25i" type="number" min="0" max="10000" type="textbox" size="5"></td>
+						<td class="td-elements" id="24">Cuadrática<br>con Función<br><input id="24i" type="number" min="0" max="10000" type="textbox" size="5"></td>
+						<td class="td-elements" id="23">Regla<br>Trapezoidal<br><input id="23i" type="number" min="0" max="10000" type="textbox" size="5"></td>
+						<td class="td-elements" id="22">Newton-Cotes<br>Cerradas<br><input id="22i" type="number" min="0" max="10000" type="textbox" size="5"></td>
+						<td class="td-elements" id="21">Newton-Cotes<br>Abiertas<br><input id="21i" type="number" min="0" max="10000" type="textbox" size="5"></td>
+						<td class="td-elements" id="20">Euler hacia<br>adelante<br><input id="20i" type="number" min="0" max="10000" type="textbox" size="5"></td>
+						<td class="td-elements" id="19">Euler hacia<br>atrás<br><input id="19i" type="number" min="0" max="10000" type="textbox" size="5"></td>
+						<td class="td-elements" id="18">Euler<br>Modificado<br><input id="18i" type="number" min="0" max="10000" type="textbox" size="5"></td>
+						<td class="td-elements" id="17">Runge-Kutta<br>2ndo, 3er y 4to<br>Orden<br><input id="17i" type="number" min="0" max="10000" type="textbox" size="5"></td>
+					</tr>
+
+				</table>
+
+				
+			</div>
+
+		</div>
+
+		
+		
+
+
+
+	
+</body>
+</html>
